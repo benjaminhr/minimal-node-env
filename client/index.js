@@ -2,8 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/style.css'
 
-const App = () => {
-  return <h1>Wassup</h1>
+class App extends React.Component {
+  render() {
+    return (
+      <h1>Hello There Mate!</h1>
+    )
+  }
 }
 
 ReactDOM.render(
