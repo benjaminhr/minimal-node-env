@@ -1,8 +1,13 @@
 import express from 'express'
-const app = express()
+import webpack from 'webpack'
+import webpackMiddleware from 'webpack-dev-middleware'
+import webpackConfig from './webpack.config.js'
 
-app.get('/', (req,res) => {
-  res.send('lol')
+const app = express()
+app.use(webpackMiddleware(webpack(webpackConfig))
+
+app.get('/api', (req,res) => {
+  
 })
 
 const port = process.env.PORT || 8080
